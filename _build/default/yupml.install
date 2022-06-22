@@ -1,0 +1,36 @@
+lib: [
+  "_build/install/default/lib/yupml/META"
+  "_build/install/default/lib/yupml/dune-package"
+  "_build/install/default/lib/yupml/errors.ml"
+  "_build/install/default/lib/yupml/opam"
+  "_build/install/default/lib/yupml/schema.ml"
+  "_build/install/default/lib/yupml/schema.mli"
+  "_build/install/default/lib/yupml/validate.ml"
+  "_build/install/default/lib/yupml/yupml.a"
+  "_build/install/default/lib/yupml/yupml.cma"
+  "_build/install/default/lib/yupml/yupml.cmi"
+  "_build/install/default/lib/yupml/yupml.cmt"
+  "_build/install/default/lib/yupml/yupml.cmx"
+  "_build/install/default/lib/yupml/yupml.cmxa"
+  "_build/install/default/lib/yupml/yupml.ml"
+  "_build/install/default/lib/yupml/yupml__.cmi"
+  "_build/install/default/lib/yupml/yupml__.cmt"
+  "_build/install/default/lib/yupml/yupml__.cmx"
+  "_build/install/default/lib/yupml/yupml__.ml"
+  "_build/install/default/lib/yupml/yupml__Errors.cmi"
+  "_build/install/default/lib/yupml/yupml__Errors.cmt"
+  "_build/install/default/lib/yupml/yupml__Errors.cmx"
+  "_build/install/default/lib/yupml/yupml__Schema.cmi"
+  "_build/install/default/lib/yupml/yupml__Schema.cmt"
+  "_build/install/default/lib/yupml/yupml__Schema.cmti"
+  "_build/install/default/lib/yupml/yupml__Schema.cmx"
+  "_build/install/default/lib/yupml/yupml__Validate.cmi"
+  "_build/install/default/lib/yupml/yupml__Validate.cmt"
+  "_build/install/default/lib/yupml/yupml__Validate.cmx"
+]
+libexec: [
+  "_build/install/default/lib/yupml/yupml.cmxs"
+]
+doc: [
+  "_build/install/default/doc/yupml/README.md"
+]

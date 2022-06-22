@@ -1,0 +1,59 @@
+(lang dune 3.0)
+(name yupml)
+(sections (lib .) (libexec .) (doc ../../doc/yupml))
+(files
+ (lib
+  (META
+   dune-package
+   errors.ml
+   opam
+   schema.ml
+   schema.mli
+   validate.ml
+   yupml.a
+   yupml.cma
+   yupml.cmi
+   yupml.cmt
+   yupml.cmx
+   yupml.cmxa
+   yupml.ml
+   yupml__.cmi
+   yupml__.cmt
+   yupml__.cmx
+   yupml__.ml
+   yupml__Errors.cmi
+   yupml__Errors.cmt
+   yupml__Errors.cmx
+   yupml__Schema.cmi
+   yupml__Schema.cmt
+   yupml__Schema.cmti
+   yupml__Schema.cmx
+   yupml__Validate.cmi
+   yupml__Validate.cmt
+   yupml__Validate.cmx))
+ (libexec (yupml.cmxs))
+ (doc (README.md)))
+(library
+ (name yupml)
+ (kind normal)
+ (archives (byte yupml.cma) (native yupml.cmxa))
+ (plugins (byte yupml.cma) (native yupml.cmxs))
+ (native_archives yupml.a)
+ (requires yojson str re)
+ (main_module_name Yupml)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Yupml)
+   (modules
+    ((name Errors) (obj_name yupml__Errors) (visibility public) (impl))
+    ((name Schema) (obj_name yupml__Schema) (visibility public) (impl) (intf))
+    ((name Validate) (obj_name yupml__Validate) (visibility public) (impl))
+    ((name Yupml) (obj_name yupml) (visibility public) (impl)))
+   (alias_module
+    (name Yupml__)
+    (obj_name yupml__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

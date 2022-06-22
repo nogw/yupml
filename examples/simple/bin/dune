@@ -1,0 +1,5 @@
+(executable
+ (public_name simple)
+ (name main)
+ (libraries yupml yojson)
+ (preprocess (pps ppx_deriving_yojson)))

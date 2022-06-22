@@ -1,0 +1,32 @@
+lib: [
+  "_build/install/default/lib/yupml/META"
+  "_build/install/default/lib/yupml/dune-package"
+  "_build/install/default/lib/yupml/opam"
+  "_build/install/default/lib/yupml/src/errors.ml" {"src/errors.ml"}
+  "_build/install/default/lib/yupml/src/schema.ml" {"src/schema.ml"}
+  "_build/install/default/lib/yupml/src/schema.mli" {"src/schema.mli"}
+  "_build/install/default/lib/yupml/src/src.a" {"src/src.a"}
+  "_build/install/default/lib/yupml/src/src.cma" {"src/src.cma"}
+  "_build/install/default/lib/yupml/src/src.cmi" {"src/src.cmi"}
+  "_build/install/default/lib/yupml/src/src.cmt" {"src/src.cmt"}
+  "_build/install/default/lib/yupml/src/src.cmx" {"src/src.cmx"}
+  "_build/install/default/lib/yupml/src/src.cmxa" {"src/src.cmxa"}
+  "_build/install/default/lib/yupml/src/src.ml" {"src/src.ml"}
+  "_build/install/default/lib/yupml/src/src__Errors.cmi" {"src/src__Errors.cmi"}
+  "_build/install/default/lib/yupml/src/src__Errors.cmt" {"src/src__Errors.cmt"}
+  "_build/install/default/lib/yupml/src/src__Errors.cmx" {"src/src__Errors.cmx"}
+  "_build/install/default/lib/yupml/src/src__Schema.cmi" {"src/src__Schema.cmi"}
+  "_build/install/default/lib/yupml/src/src__Schema.cmt" {"src/src__Schema.cmt"}
+  "_build/install/default/lib/yupml/src/src__Schema.cmti" {"src/src__Schema.cmti"}
+  "_build/install/default/lib/yupml/src/src__Schema.cmx" {"src/src__Schema.cmx"}
+  "_build/install/default/lib/yupml/src/src__Validate.cmi" {"src/src__Validate.cmi"}
+  "_build/install/default/lib/yupml/src/src__Validate.cmt" {"src/src__Validate.cmt"}
+  "_build/install/default/lib/yupml/src/src__Validate.cmx" {"src/src__Validate.cmx"}
+  "_build/install/default/lib/yupml/src/validate.ml" {"src/validate.ml"}
+]
+libexec: [
+  "_build/install/default/lib/yupml/src/src.cmxs" {"src/src.cmxs"}
+]
+doc: [
+  "_build/install/default/doc/yupml/README.md"
+]

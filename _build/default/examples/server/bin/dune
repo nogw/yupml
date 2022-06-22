@@ -1,0 +1,5 @@
+(executable
+  (name server)
+  (public_name server.exe)
+  (libraries yojson dream opium yupml)
+  (preprocess (pps lwt_ppx ppx_deriving_yojson)))

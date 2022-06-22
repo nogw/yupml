@@ -1,0 +1,6 @@
+description = ""
+requires = "re str yojson"
+archive(byte) = "yupml.cma"
+archive(native) = "yupml.cmxa"
+plugin(byte) = "yupml.cma"
+plugin(native) = "yupml.cmxs"

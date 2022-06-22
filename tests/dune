@@ -1,0 +1,19 @@
+(library
+ (name json)
+ (modules json)
+ (libraries yojson))
+
+(test
+ (name test_yup_string)
+ (modules test_yup_string)
+ (libraries alcotest yupml json))
+
+(test
+ (name test_yup_number)
+ (modules test_yup_number)
+ (libraries alcotest yupml json))
+
+(test
+ (name test_yup_list)
+ (modules test_yup_list)
+ (libraries alcotest yupml json))

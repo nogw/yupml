@@ -1,0 +1,4 @@
+(library
+  (name yupml)
+  (public_name yupml)
+  (libraries yojson str re))

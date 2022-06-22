@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/example-server/META"
-  "_build/install/default/lib/example-server/dune-package"
-  "_build/install/default/lib/example-server/opam"
-]
-bin: [
-  "_build/install/default/bin/server.exe"
-]

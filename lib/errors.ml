@@ -30,7 +30,7 @@ let errors_to_string error =
   | StringOutOfRange (f, n, lob) -> Format.sprintf "Length of field \"%s\" is %s than %d" f lob n
   | ListOutOfRange (f, n, lob) -> Format.sprintf "Length of field \"%s\" is %s than %d" f lob n
   | StringLength (f, s) -> Format.sprintf "Field \"%s\" should have its length equal to %d" f s
-  | ListLength (f, s) -> Format.sprintf "[TODO: better message] Field \"%s\" should have its length equal to %d" f s
+  | ListLength (f, s) -> Format.sprintf "Field \"%s\" should have its length equal to %d" f s
   | ExpectEmail f -> Format.sprintf "Field \"%s\" should be an email" f
   | ExpectUri f -> Format.sprintf "Field \"%s\" should be an uri" f
   | ExpectUuid f -> Format.sprintf "Field \"%s\" should be an uuid" f

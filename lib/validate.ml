@@ -102,20 +102,18 @@ module StringValid = struct
 
   let uri field value =
     Test.test ~value
-      ~test: (
-        Test.test_regex 
-           ~value
-           ~regex: {|(([\w]+:)?\/\/)?(([\d\w]|%[a-fA-f\d]{2,2})+(:([\d\w]|%[a-fA-f\d]{2,2})+)?@)?([\d\w][-\d\w]{0,253}[\d\w]\.)+[\w]{2,63}(:[\d]+)?(\/([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)*(\?(&?([-+_~.\d\w]|%[a-fA-f\d]{2,2})=?)*)?(#([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)?|}
-          )
+      ~test:
+        (Test.test_regex ~value
+           ~regex:
+             {|(([\w]+:)?\/\/)?(([\d\w]|%[a-fA-f\d]{2,2})+(:([\d\w]|%[a-fA-f\d]{2,2})+)?@)?([\d\w][-\d\w]{0,253}[\d\w]\.)+[\w]{2,63}(:[\d]+)?(\/([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)*(\?(&?([-+_~.\d\w]|%[a-fA-f\d]{2,2})=?)*)?(#([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)?|})
       ~error_message:(ExpectUri field)
 
   let uuid field value =
     Test.test ~value
-      ~test: (
-        Test.test_regex 
-	         ~value
-           ~regex: {|[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}|}
-        )
+      ~test:
+        (Test.test_regex ~value
+           ~regex:
+             {|[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}|})
       ~error_message:(ExpectUuid field)
 
   let matches field value regex =
@@ -168,4 +166,9 @@ module Validate = struct
     | String of StringValid.t list
     | Number of NumberValid.t list
     | List of ListValid.t list
+
+  let is_required = function
+    | String ls -> List.mem StringValid.Required ls
+    | Number ls -> List.mem NumberValid.Required ls
+    | List ls -> List.mem ListValid.Required ls
 end
